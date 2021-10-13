@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <!--DOKUMENTATION-->
+        <!--Jag började ganska simpelt med en plan där jag tänkte att jag skulle göra en hemsida om Rocket League (RL) och det började bra. Det blev svårare och svårare att göra 
+        mixins då det inte känns som man kan göra så mycket mer med dom tillslut, vilket man kan om man ska göra en större hemsida. Först ville jag ha videos istället för linkar till
+        videos men det blev bara problem då jag inte kunde ändra height på videon. Först ville jag inte heller att allt skulle vara i en grid layout sådär men det kändes lättast
+        senare med tanke på mixin layout. Vissa problem stötte jag på med align item center osv men det löste sig. Koden i slutändan blev inte riktigt som planerad men med probleme
+        jag stötte på så blev det ganska bra ändå-->
+
+
+    <section class="showcase"> <!--Showcase är för -->
+        <header> <!--Headern använder jag för-->
+          <h1 class="logo">Rocket League</h1> <!--Titeln-->
+        </header>
+
+    <video src="yt5s.com-Rocket League - Official 4K Cinematic Free To Play Trailer-(480p).mp4" muted loop autoplay></video> <!--Detta är trailern till rocket league i bakgrunden-->
+
+    <div class="overlay"></div> <!--Detta kommer vara där jag stylar videon så den inte bara är en viss storlek eller fixad osv.-->
+
+    <div class="text"> <!--Texterna-->
+        <h2>Car Soccer</h2>
+        <h3>Information</h3>
+        <p>Rocket League is a vehicular association football video game. It is developed and published by Psyonix. It was first released on Microsoft Windows and PlayStation 4 in July 2015. It was later released on Xbox One, OS X and Linux in 2016. It is a sequel to Supersonic Acrobatic Rocket-Powered Battle-Cars (2008).
+            It is multiplayer and single-player. Single-player has the "Season" game mode where the player plays against bots. Multiplayer is online and has 1 versus 1, 2 versus 2, 3 versus 3 and 4 versus 4 modes.
+            Players control a rocket-powered car and use it to hit a ball that is much larger than the cars towards the other team's goal area to score points.
+            The game has received very positive reviews. As of January 2017, the game has had 25 million players since 2015.</p>
+    </div>
+
+
+        <!--Ska göra en ny sida med bilder på Octane, Fennec och Dominious, förklara saker om varför de är dom populäraste och visa att man kan customiza osv.-->
+    
+    <section>
+        <div class="grid">
+            <div class="grid-item"><img src="Octane utan preset.webp" height="250px" width="200px"><h1>Octane</h1>
+                <p>Detta är Octane utan något preset. Octane är den bilen som mesta proplayers använder då den i spelet känns snabbast.</p>
+            </div>
+
+            <div class="grid-item"><img src="Dominus utan preset.webp"height="250px" width="200px"><h1>Dominus</h1>
+                <p>Detta är Dominus utan något preset. Det är den bilen som mestadels freestylers använder då den är lättast att få flip-resets för den är så platt.</p>
+            </div>
+
+            <div class="grid-item"><img src="Fennec utan preset.webp"height="250px" width="200px"><h1>Fennec</h1>
+                <p>Detta är Fennec utan något preset. Det är en av dom top 3 bilarna med Octane och dominus för att den känns så skön att köra i spelet och är därför en bil många pros använder.</p>
+            </div>
+
+            <div class="grid-item"><img src="octane med preset.png"height="250px" width="200px"><h1>Octane</h1>
+                <p>Här kan du se Octane med en preset. Detta är ett exempel på hur man kan customize sin bil. Man kan göra det på ett antal olika sätt vilket man kan se på bilderna.</p>
+            </div>
+
+            <div class="grid-item"><img src="Dominus med preset.png"height="250px" width="200px"><h1>Dominus</h1>
+                <p>Detta är Dominus med preset. Det är också ett exempel med på Dominus istället, det är lite skönare att köra runt med en bil som man tycker ser coolare ut. Jämför man med bilderna ovan och nedan så kan man förstå varför.</p>
+            </div>
+
+            <div class="grid-item"><img src="Fennec med preset.jpg"height="250px" width="200px"><h1>Fennec</h1>
+                <p>Detta är Fennec med preset. Olika Custimizations kan man få på olika sätt, man kan köpa items eller Trade up. Eller såklar köpa av andra spelare genom Trade mellan spelare.</p>
+            </div>
+            <div class="grid-item"><img src="Trade up.webp"height="250px" width="200px"><h1>Såhär ser Trade up ut</h1>
+            <p>Trade up är ett system där du kan få ett bättre item som är en högre sällsynthet än de 5 man måste offra.</p>
+            </div>
+            
+            <div class="grid-item"><img src="trademedperson.webp"height="250px" width="200px"><h1>Såhär ser Trade med en person ut</h1>
+            <p>När man byter med en person så kan man byta vad som helst förutom tournament items då de är untradeable. För att kunna få byta med andra människor så måste man dock ha köpt något för 500 credits, vilket kostar rikitga pengar.</p>
+            </div>
+            <div class="grid-item"><img src="Drops.jpg"height="250px" width="200px"><h1>Såhär ser olika drops ut/lådor man kan öppna</h1>
+            <p>Drops kan man få genom att göra missions eller gå upp i level. I dropsen kan man få vad som helst, om man öppnar en vanlig rare så kan man få chansen för 2 högre sälsynta items men det är mindre chans. Så är det med alla drops.</p>
+            </div>
+
+            <div class="mechanicstitel"><h1>Mechanics</h1></div>
+
+
+        <div class = "container"> <!--Här gjorde jag bara samma där den länkar till youtube videos jag rekomenderar för om man vill lära sig specifika mechanics-->
+            <div class="container-item"><a href="https://www.youtube.com/watch?v=4iKouXvdh8I&ab_channel=Thanovic"><img src="speedflip.jpg">Klicka här för en Speed Flip Tuotrial</a></div>
+            <div class="container-item"><a href="https://www.youtube.com/watch?v=96tNxK5vTsQ&ab_channel=amustycow"><img src="mustyflick.jpg">Klicka här för en Musty Flick Tuotrial</a></div>
+            <div class="container-item"><a href="https://www.youtube.com/watch?v=ypIZtRtL1d0&ab_channel=FLuuMP"><img src="passing plays.png">Klicka här för Passing Plays Tuotrial</a></div>
+            <div class="container-item"><a href="https://www.youtube.com/watch?v=ddEe3t_cKyw&t=41s&ab_channel=WaytonPilkin"><img src="airdribble.jpg">Klicka här för en Airdribble Tuotrial</a></div>
+            <div class="container-item"><a href="https://www.youtube.com/watch?v=YR2aUPU9uPE&ab_channel=SpookLuke"><img src="flipreset.jpg">Klicka här för en flipreset Tuotrial</a></div>
+            <div class="container-item"><a href="https://www.youtube.com/watch?v=PkIupX66sF8&t=10s&ab_channel=Thanovic"><img src="ceilingshot.jpg">Klicka här för en ceiling shot Tuotrial</a></div>
+        </div>
+        
+    </section>
+
+    <div class="totop"><a href="#" class="to-top">Back to top</a></div>
+
+
+</body>
+</html>

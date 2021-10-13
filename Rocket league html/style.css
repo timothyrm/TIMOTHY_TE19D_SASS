@@ -1,0 +1,264 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /*Gör att videon är placerad på hela skärmen*/
+  font-family: 'Poppins', sans-serif;
+  /* Ändrar fonten till sans-serif för det är snyggare*/
+}
+
+header {
+  /*Mixin för positioning för videon o lite annat*/
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 40px 100px;
+  z-index: 1000;
+  /*Här har jag gjort en mixin för flexbox*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo {
+  font-size: 5em;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.showcase {
+  /*Mixin för positioning för videon o lite annat*/
+  position: absolute;
+  width: 100%;
+  right: 0;
+  min-height: 100vh;
+  padding: 100px;
+  /*Här har jag gjort en mixin för flexbox*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #111;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.showcase video {
+  /*Mixin för positioning för videon o lite annat*/
+  position: absolute;
+  width: 100%;
+  /*Bara en till mixin för positioning så jag slipper skriva om små saker överallt*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1000px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.8;
+}
+
+.overlay {
+  /*Detta är för Bakgrunden*/
+  /*Mixin för positioning för videon o lite annat*/
+  position: absolute;
+  width: 100%;
+  /*Bara en till mixin för positioning så jag slipper skriva om små saker överallt*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: #03a9f4;
+  mix-blend-mode: overlay;
+}
+
+.text {
+  /*Här är texten under titeln*/
+  position: absolute;
+  z-index: 10;
+  margin-bottom: 170%;
+}
+
+.text h2 {
+  /*fortfarande texten under titeln men denna gången under h1*/
+  font-size: 3.2em;
+  font-weight: 800;
+  /*Här är en mixin för text färgen där den blir vit, 1em stor och i uppercase*/
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.text h3 {
+  /*och här h3*/
+  font-size: 1.8em;
+  font-weight: 700;
+  /*Här är en mixin för text färgen där den blir vit, 1em stor och i uppercase*/
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.text p {
+  /*och är är paragrafen där*/
+  font-size: 1.2em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+
+.text a {
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.text a:hover {
+  letter-spacing: 6px;
+}
+
+.grid {
+  margin-top: 60%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (400px)[3];
+      grid-template-columns: repeat(3, 400px);
+  /* 3 kolumner */
+  -ms-grid-rows: (400px)[3];
+      grid-template-rows: repeat(3, 400px);
+  /* 3 rows  */
+  grid-gap: 100px 250px;
+  /*  */
+}
+
+.grid-item {
+  border: thin gray solid;
+  /*Här är en mixin för text färgen där den blir vit, 1em stor och i uppercase*/
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+  text-align: center;
+  text-transform: none;
+}
+
+img {
+  width: 100%;
+}
+
+.mechanicstitel {
+  position: absolute;
+  /*Här är en mixin för text färgen där den blir vit, 1em stor och i uppercase*/
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+  margin-top: 77%;
+  margin-left: 36%;
+  font-size: 3em;
+}
+
+.container {
+  margin-top: 60%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (400px)[3];
+      grid-template-columns: repeat(3, 400px);
+  /* 3 kolumner */
+  -ms-grid-rows: (400px)[3];
+      grid-template-rows: repeat(3, 400px);
+  /* 3 rows  */
+  grid-gap: 100px 250px;
+  /*  */
+  margin-top: 20%;
+  position: relative;
+}
+
+.container-item {
+  border: thin gray solid;
+  text-align: center;
+  text-transform: none;
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 2em;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.totop {
+  position: absolute;
+  text-align: center;
+  font-size: 180%;
+  margin: 2em;
+  font-family: 'Calibri', arial, sans-serif;
+  margin-top: 200%;
+  margin-left: 38%;
+}
+
+.to-top {
+  color: white;
+  padding-top: 1.8em;
+  display: inline-block;
+  position: relative;
+  border-color: white;
+  text-decoration: none;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.to-top:before {
+  content: '▲';
+  font-size: .9em;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -.7em;
+  border: solid .13em white;
+  border-radius: 10em;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.3em;
+  border-color: inherit;
+  -webkit-transition: -webkit-transform .5s ease-in;
+  transition: -webkit-transform .5s ease-in;
+  transition: transform .5s ease-in;
+  transition: transform .5s ease-in, -webkit-transform .5s ease-in;
+}
+
+.to-top:hover {
+  color: pink;
+  border-color: pink;
+}
+
+.to-top:hover:before {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,218 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*Gör att videon är placerad på hela skärmen*/
+  font-family: 'Poppins', sans-serif; /* Ändrar fonten till sans-serif för det är snyggare*/
+}
+@mixin positioning(){ /*Mixin för positioning för videon o lite annat*/
+    position: absolute;
+    width: 100%;
+}
+
+@mixin flex(){ /*Här har jag gjort en mixin för flexbox*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header /*Ändrar jag Headern så ändrar jag titeln, så detta är för att placera titeln på ett snyggt ställe*/
+{
+    @include positioning();
+    top: 0;
+    left: 0;
+    padding: 40px 100px;
+    z-index: 1000;
+    @include flex();
+}
+header .logo/*Detta är också titeln, där jag har gjort Size, Färg, så det är stora bokstäver osv*/
+{
+    font-size: 5em;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.showcase/*Detta är för videon*/
+{
+    @include positioning();
+    right: 0;
+    min-height: 100vh;
+    padding: 100px;
+    @include flex();
+    background: #111;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+@mixin positioning2(){ /*Bara en till mixin för positioning så jag slipper skriva om små saker överallt*/
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.showcase video/*Positioneringen för videon*/
+{
+    @include positioning();
+    @include positioning2();
+    height: 1000px;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.overlay{/*Detta är för Bakgrunden*/
+    @include positioning();
+    @include positioning2();
+    height: 60%;
+    background: #03a9f4;
+    mix-blend-mode: overlay;
+}
+
+@mixin textcolor{/*Här är en mixin för text färgen där den blir vit, 1em stor och i uppercase*/
+    color: #fff;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+.text{/*Här är texten under titeln*/
+    position: absolute;
+    z-index: 10;
+    margin-bottom: 170%;
+}
+
+.text h2{ /*fortfarande texten under titeln men denna gången under h1*/
+    font-size: 3.2em;
+    font-weight: 800;
+    @include textcolor();
+}
+
+.text h3{ /*och här h3*/
+    font-size: 1.8em;
+    font-weight: 700;
+    @include textcolor();
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.text p{/*och är är paragrafen där*/
+    font-size: 1.2em;
+    color: #fff;
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 700px;
+}
+.text a{
+    display: inline-block;
+    font-size: 1em;
+    background: #fff;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #111;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.text a:hover{
+    letter-spacing: 6px;
+}
+
+@mixin layout(){
+    margin-top: 60%;
+    display: grid;
+    grid-template-columns: repeat(3,400px);  /* 3 kolumner */
+    grid-template-rows: repeat(3,400px); /* 3 rows  */
+    grid-gap:100px 250px; /*  */    
+}
+
+.grid{
+    @include layout();
+  }
+  
+.grid-item{
+    border:thin gray solid;
+    @include textcolor();
+    text-align: center;
+    text-transform: none;
+}
+
+img {
+    width: 100%;
+
+}
+
+.mechanicstitel{
+    position: absolute;
+    @include textcolor();
+    margin-top: 77%;
+    margin-left: 36%;
+    font-size: 3em;
+}
+
+.container{
+    @include layout();
+    margin-top: 20%;
+    position: relative;
+}
+
+.container-item{
+    border:thin gray solid;
+    text-align: center;
+    text-transform:none;
+
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 2em;
+    font-family:'Times New Roman', Times, serif
+}
+
+
+.totop{
+    position: absolute;
+	text-align:center;
+	font-size:180%;
+	margin:2em;
+	font-family: 'Calibri', arial, sans-serif;
+    margin-top: 200%;
+    margin-left: 38%;
+
+}
+
+.to-top{
+	color:white;
+	padding-top:1.8em;
+	display:inline-block;
+	position:relative;
+	border-color:white;
+	text-decoration:none;
+	transition:all .3s ease-out;
+}
+.to-top:before{
+	content:'▲';
+	font-size:.9em;
+	position:absolute;
+	top:0;
+	left:50%;
+	margin-left:-.7em;
+	border:solid .13em white;
+	border-radius:10em;
+	width:1.4em;
+	height:1.4em;
+	line-height:1.3em;
+	border-color:inherit;
+	transition:transform .5s ease-in;
+}
+.to-top:hover{
+	color:pink;
+	border-color:pink;
+}
+.to-top:hover:before{
+	transform: rotate(360deg);
+}
+
+
+
